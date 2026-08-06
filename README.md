@@ -15,3 +15,44 @@ and export to CSV functionality.
 ## Add New Lead
 Simple form to add new leads with name, email, phone, 
 assigned to, status, priority and notes fields.
+
+
+## Installation
+
+### Backend
+
+```bash
+cd backend
+npm install
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+## Environment Variables
+
+Create a `.env` file inside the `backend` folder and add:
+
+```env
+PORT=
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+## Run the Project
+
+### Backend
+
+```bash
+npm run dev
+```
+
+### Frontend
+
+```bash
+npm run dev
+```
