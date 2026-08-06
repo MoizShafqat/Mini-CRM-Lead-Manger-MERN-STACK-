@@ -13,8 +13,15 @@ const limiter = rateLimit({
   message: { message: 'Too many requests. Please try again later.' },
 });
 
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+};
+
 app.use(limiter);
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const mongoUri = process.env.MONGO_URI;
